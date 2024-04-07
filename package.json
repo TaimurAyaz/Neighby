@@ -1,0 +1,12 @@
+{
+  "name": "neighby",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {},
+  "author": "Taimur Ayaz",
+  "license": "CC BY-NC 4.0",
+  "dependencies": {
+    "pm2": "^5.3.1"
+  }
+}

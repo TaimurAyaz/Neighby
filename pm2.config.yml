@@ -1,0 +1,14 @@
+apps:
+  - name: "neighby.service.mothership"
+    script: "touch ./local/logs/neighby.service.mothership.log && rm -f ./services/mothership/.env && sh ./utilities/copy_env.sh .env service.mothership && touch ./services/mothership/.env && mv service.mothership.env ./services/mothership/.env && rm -f service.mothership.env && cd services/mothership && npm run build && npm start"
+    watch: false
+    error_file: ./local/logs/neighby.process.service.mothership.error.log
+    out_file: ./local/logs/neighby.process.service.mothership.out.log
+    pid_file: ./local/process/neighby.service.mothership.pid
+
+  - name: "neighby.frontend"
+    script: "touch ./local/logs/neighby.frontend.log && rm -f ./frontend/.env && sh ./utilities/copy_env.sh .env frontend && touch ./frontend/.env && mv frontend.env ./frontend/.env && rm -f frontend.env && cd frontend && npm start"
+    watch: false
+    error_file: ./local/logs/neighby.process.frontend.error.log
+    out_file: ./local/logs/neighby.process.frontend.out.log
+    pid_file: ./local/process/neighby.frontend.pid

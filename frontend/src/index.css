@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply bg-white dark:bg-zinc-900;
+    }
+}
+
+/* Chrome autocomplete background fill */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}
+input[data-autocompleted] {
+    background-color: transparent !important;
+}
+
+/* Spinner */
+
+.spinner {
+    position: relative;
+    width: 16px;
+    height:16px
+}
+
+.spinner.spinner-large {
+    width: 32px;
+    height:32px
+}
+
+.spinner-container {
+    position: absolute;
+    width: 0;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: scale(.075);
+    transform: scale(.075);
+    z-index:1
+}
+
+.spinner.spinner-large .spinner-container {
+    -webkit-transform: scale(.15);
+    transform:scale(.15)
+}
+
+.spinner-nib {
+    position: absolute;
+    top: -12.5px;
+    width: 66px;
+    height: 28px;
+    background: transparent;
+    border-radius: 25%/50%;
+    -webkit-transform-origin: left center;
+    transform-origin:left center
+}
+
+.spinner-nib:before {
+    width: 100%;
+    height: 100%;
+    display: block;
+    content: "";
+    background: #000;
+    border-radius: 25%/50%;
+    -webkit-animation-duration: .8s;
+    animation-duration: .8s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    animation-direction: normal;
+    -webkit-animation-fill-mode: none;
+    animation-fill-mode: none;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+    -webkit-animation-name: spinner-line-fade-default;
+    animation-name:spinner-line-fade-default
+}
+
+.spinner-nib.spinner-nib-1 {
+    -webkit-transform: rotate(0deg) translateX(40px);
+    transform:rotate(0deg) translateX(40px)
+}
+
+.spinner-nib.spinner-nib-1:before {
+    -webkit-animation-delay: -.8s;
+    animation-delay:-.8s
+}
+
+.spinner-nib.spinner-nib-2 {
+    -webkit-transform: rotate(45deg) translateX(40px);
+    transform:rotate(45deg) translateX(40px)
+}
+
+.spinner-nib.spinner-nib-2:before {
+    -webkit-animation-delay: -.7s;
+    animation-delay:-.7s
+}
+
+.spinner-nib.spinner-nib-3 {
+    -webkit-transform: rotate(90deg) translateX(40px);
+    transform:rotate(90deg) translateX(40px)
+}
+
+.spinner-nib.spinner-nib-3:before {
+    -webkit-animation-delay: -.6s;
+    animation-delay:-.6s
+}
+
+.spinner-nib.spinner-nib-4 {
+    -webkit-transform: rotate(135deg) translateX(40px);
+    transform:rotate(135deg) translateX(40px)
+}
+
+.spinner-nib.spinner-nib-4:before {
+    -webkit-animation-delay: -.5s;
+    animation-delay:-.5s
+}
+
+.spinner-nib.spinner-nib-5 {
+    -webkit-transform: rotate(180deg) translateX(40px);
+    transform:rotate(180deg) translateX(40px)
+}
+
+.spinner-nib.spinner-nib-5:before {
+    -webkit-animation-delay: -.4s;
+    animation-delay:-.4s
+}
+
+.spinner-nib.spinner-nib-6 {
+    -webkit-transform: rotate(225deg) translateX(40px);
+    transform:rotate(225deg) translateX(40px)
+}
+
+.spinner-nib.spinner-nib-6:before {
+    -webkit-animation-delay: -.3s;
+    animation-delay:-.3s
+}
+
+.spinner-nib.spinner-nib-7 {
+    -webkit-transform: rotate(270deg) translateX(40px);
+    transform:rotate(270deg) translateX(40px)
+}
+
+.spinner-nib.spinner-nib-7:before {
+    -webkit-animation-delay: -.2s;
+    animation-delay:-.2s
+}
+
+.spinner-nib.spinner-nib-8 {
+    -webkit-transform: rotate(315deg) translateX(40px);
+    transform:rotate(315deg) translateX(40px)
+}
+
+.spinner-nib.spinner-nib-8:before {
+    -webkit-animation-delay: -.1s;
+    animation-delay:-.1s
+}
+
+@-webkit-keyframes spinner-line-fade-default {
+    0%, to {
+        opacity:.55
+    }
+
+    95% {
+        opacity:.08
+    }
+
+    1% {
+        opacity:.55
+    }
+}
+
+@keyframes spinner-line-fade-default {
+    0%, to {
+        opacity:.55
+    }
+
+    95% {
+        opacity:.08
+    }
+
+    1% {
+        opacity:.55
+    }
+}
