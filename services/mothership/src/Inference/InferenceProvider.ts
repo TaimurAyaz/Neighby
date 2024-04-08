@@ -62,8 +62,6 @@ async function inferWithRetry(prompt: string, retryNumber: number) {
             ...(toolRuns ?? []),
         ]);
 
-        console.log(`Response: ${finalResponse.content}`)
-
         if (finalResponse.content === "") {
             if (retryNumber < MAX_RETRIES) {
                 return inferWithRetry(prompt, retryNumber + 1)
